@@ -1,0 +1,15 @@
+:root {
+  --blue: #bae8f5;
+  --bg: #ecede8;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: var(--blue);
+  font-size: 16px;
+  line-height: 1.5;
+  color: black;
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
