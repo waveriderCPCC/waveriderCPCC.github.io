@@ -13,3 +13,12 @@ body {
   font-optical-sizing: auto;
   font-style: normal;
 }
+
+.introimg {
+  margin: 0.8em;
+  width: 22em;
+  margin-bottom: 0;
+  
+  margin-right: auto;
+  margin-left: 1.8em;
+}
