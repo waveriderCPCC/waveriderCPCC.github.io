@@ -18,8 +18,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
-  background-size: 100% 100%;
-  background-size: cover;
+  background-size: 120% 120%;
   font-size: 20px;
   line-height: 1.5;
   font-optical-sizing: auto;
@@ -31,10 +30,10 @@ body {
 body::before {
   content: "";
   position: fixed;
-  top: -2%;   /* push out */
-  left: -2%;
+  top: -2%;
+  left: -1%;
   width: calc(100% + 20px);
-  height: 10em;
+  height: 250px;
   background-image: linear-gradient(rgba(255,255,255,0.5), rgba(0,0,0,0));
   background-position: center;
   background-size: 120%;
