@@ -22,8 +22,97 @@
           </h2> 
     </header>
     <main>  
-      <p>i decided to make a website branding myself.</p>
-      <p>brand board will be here.</p>
+      <p>i decided to make a website branding myself. ADD MORE HERE</p>
+      <h2>header style</h2>
+      <p>the title (the one that says <b>waverider • &lt;page&gt;</b>, uses <b>Nunito</b>, a drop shadow, and a subtle blue stroke that shows through to the background (color #4), besides also being filled with black:</p>
+      <code>
+      /* waverider • home */
+      <br>.toptitle {
+      <br>&nbsp;text-align: center;<br><br>
+      &nbsp;font-family: "Nunito", sans-serif;
+      <br>&nbsp;font-style: normal;
+      <br>&nbsp;font-weight: 700;
+      <br>&nbsp;font-size: 50px;
+      <br>&nbsp;line-height: 44px;
+      <br><br>&nbsp;color: #000000;
+      <br><br>&nbsp;text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      <br>&nbsp;paint-order: stroke fill;
+      <br>&nbsp;-webkit-text-stroke: 4px rgba(152, 213, 230, 0.2);
+      <br>&nbsp;-webkit-text-fill-color: black;<br>
+      }
+      </code>
+      <p>the top nav bar uses this styling, as well as the font <b>Poppins</b>:</p>
+      <code>
+        .topmenu {
+        <br>&nbsp;color: black;
+        <br>&nbsp;text-align: center;
+        <br>&nbsp;font-family: "Poppins", sans-serif;
+        <br>&nbsp;font-weight: 400;
+        <br>&nbsp;font-size: 18px;
+        <br>&nbsp;text-shadow: 0px 0px 4px rgba(152, 213, 230, 0.8);
+        <br>}
+      </code>
+      <h2>font examples</h2>
+      <div class="fonts">
+        <p style="font-size: larger;">this font is <b>Open Sans</b>, being used for mostly everything.</p>
+        <p style="font-size: larger; font-family: 'Poppins', sans-serif;">this is <b>Poppins</b>, used for the top navbar.</p>
+        <p style="font-size: larger; font-family: 'Nunito', sans-serif;">this is a small example of the title font, <b>Nunito</b></p>
+      </div>
+      <h2>gradients</h2>
+      <p>the header has a gradient from white to clear (and is 400px tall):</p>
+      background-image: linear-gradient(rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.5) 25%, rgba(0,0,0,0) 100%);
+      <code><span style="color: var(--b);">background-image: linear-gradient</span>(<span style="color: var(--b);">rgba</span>(255,255,255,0.5) 0%,
+        <!-- <span style="color: rgba(255,255,255,0.5);">(255,255,255,0.5)</span>,  -->
+        <span style="color: var(--b);">rgba</span>(255,255,255,0.5), 25%);
+        <span style="color: var(--b);">rgba</span>(0,0,0,0), 100%);</code>
+      <div class="gradex"></div>
+      <p>the footer has a gradient from clear, to a subtle black, and back to clear.:</p>
+      <code><span style="color: var(--b);">background-image: linear-gradient</span>(<span style="color: var(--b);">rgba</span>(0,0,0,0) 0%, 
+        <span style="color: var(--b);">rgba</span>(0,0,0,0.2) 18%, 
+        <span style="color: var(--b);">rgba</span>(0,0,0,0) 100%);
+      </code>
+      <div class="footerx"></div>
+      <h2>images</h2>
+      <p>images are rounded and glowing white, with small italic captions below, like this:</p>
+      <div class="image">
+        <img src="/web115/images/image.png"/>
+        <p><i>this is a caption.<br>second line.</i></p>
+      </div>
+      <h2>colors</h2>
+      <section class="board" aria-labelledby="palette-title">
+      <div class="palette">
+        <div class="swatch__circle" style="background:white" aria-hidden="true"></div>
+        <div class="swatch__meta">
+          <div class="swatch__name">1. white (text)</div>
+          <div class="swatch__hex">#FFFFFF</div>
+        </div>
+        <div class="swatch__exp">this the main color for most text, such at in the body and footer.</div>        
+      </div>
+      <div class="palette">
+        <div class="swatch__circle" style="background:#9BE3F8" aria-hidden="true"></div>
+        <div class="swatch__meta">
+          <div class="swatch__name">2. soft blue (links)</div>
+          <div class="swatch__hex">#9BE3F8</div>
+        </div>
+        <div class="swatch__exp">all links use this color (besides the ones on the top), as well as a white drop shadow that acts as a "glow" effect.</div>        
+      </div>
+      <div class="palette">
+        <div class="swatch__circle" style="background:black" aria-hidden="true"></div>
+        <div class="swatch__meta">
+          <div class="swatch__name">3. black</div>
+          <div class="swatch__hex">#000000</div>
+        </div>
+        <div class="swatch__exp">this is used for the links at the top, the logo, and in some gradients and drop shadows.</div>
+      </div>
+      <div class="palette">
+        <div class="swatch__circle" style="background:rgba(152, 213, 230, 0.2)" aria-hidden="true"></div>
+        <div class="swatch__meta">
+          <div class="swatch__name">4. soft blue glass</div>
+          <div class="swatch__hex">rgba(152, 213, 230, 0.2)</div>
+        </div>
+        <div class="swatch__exp">the title stroke, it shoes through to the background a bit. also used in the top menu.</div>
+      </div>
+      </section>
     </main>
     <footer>
       <script src="scripts/main.js"></script>

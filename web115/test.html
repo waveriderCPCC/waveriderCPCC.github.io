@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Brand Board – Color Palette</title>
+<style>
+  :root {
+    --gap: 1rem;
+    --radius: 999px; /* full pill/circle */
+    --swatch-size: 88px; /* adjust circle size */
+    --card-bg: #111;     /* page background */
+    --text: #fafafa;     /* default text color */
+    --muted: #c9c9c9;
+    --ring: rgba(255,255,255,.35);
+  }
+
+  /* Page frame (optional) */
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, "Open Sans", Arial, sans-serif;
+    background: var(--card-bg);
+    color: var(--text);
+    display: grid;
+    place-content: center;
+    min-height: 100svh;
+    padding: 2rem;
+  }
+
+  .board {
+    max-width: 900px;
+  }
+
+  .board h1 {
+    margin: 0 0 1rem;
+    font-size: clamp(1.25rem, 1.5vw + 1rem, 2rem);
+    letter-spacing: .2px;
+  }
+
+  .palette {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: var(--gap);
+  }
+
+  .swatch {
+    display: grid;
+    justify-items: center;
+    gap: .6rem;
+    padding: 1rem;
+    background: rgba(255,255,255,.04);
+    border-radius: 1rem;
+    border: 1px solid rgba(255,255,255,.08);
+    transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+  }
+  .swatch:focus-within,
+  .swatch:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,.35);
+    border-color: var(--ring);
+  }
+
+  .swatch__circle {
+    width: var(--swatch-size);
+    height: var(--swatch-size);
+    border-radius: var(--radius);
+    border: 2px solid rgba(255,255,255,.5); /* subtle rim so light colors still read */
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,.08);
+  }
+
+  .swatch__meta {
+    text-align: center;
+    line-height: 1.25;
+  }
+  .swatch__name {
+    font-weight: 600;
+    margin-bottom: .15rem;
+  }
+  .swatch__hex {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+    color: var(--muted);
+    font-size: .95rem;
+  }
+
+  /* optional “copy” button */
+  .copy {
+    margin-top: .5rem;
+    padding: .35rem .6rem;
+    font-size: .9rem;
+    background: transparent;
+    color: var(--text);
+    border: 1px solid rgba(255,255,255,.25);
+    border-radius: .6rem;
+    cursor: pointer;
+  }
+  .copy:focus-visible { outline: 2px solid var(--ring); outline-offset: 2px; }
+
+  /* respect reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .swatch { transition: none; }
+  }
+</style>
+</head>
+<body>
+  <section class="board" aria-labelledby="palette-title">
+    <h1 id="palette-title">Brand Color Palette</h1>
+
+    <div class="palette">
+      <!-- DUPLICATE THIS BLOCK PER COLOR -->
+      <article class="swatch">
+        <div class="swatch__circle" style="background:#0EA5E9" aria-hidden="true"></div>
+        <div class="swatch__meta">
+          <div class="swatch__name">Primary / Sky</div>
+          <div class="swatch__hex">#0EA5E9</div>
+          <button class="copy" data-hex="#0EA5E9" aria-label="Copy #0EA5E9">Copy</button>
+        </div>
+      </article>
+
+      <article class="swatch">
+        <div class="swatch__circle" style="background:#22C55E" aria-hidden="true"></div>
+        <div class="swatch__meta">
+          <div class="swatch__name">Accent / Leaf</div>
+          <div class="swatch__hex">#22C55E</div>
+          <button class="copy" data-hex="#22C55E" aria-label="Copy #22C55E">Copy</button>
+        </div>
+      </article>
+
+      <article class="swatch">
+        <div class="swatch__circle" style="background:#F59E0B" aria-hidden="true"></div>
+        <div class="swatch__meta">
+          <div class="swatch__name">Warning / Amber</div>
+          <div class="swatch__hex">#F59E0B</div>
+          <button class="copy" data-hex="#F59E0B" aria-label="Copy #F59E0B">Copy</button>
+        </div>
+      </article>
+
+      <article class="swatch">
+        <div class="swatch__circle" style="background:#EF4444" aria-hidden="true"></div>
+        <div class="swatch__meta">
+          <div class="swatch__name">Error / Chili</div>
+          <div class="swatch__hex">#EF4444</div>
+          <button class="copy" data-hex="#EF4444" aria-label="Copy #EF4444">Copy</button>
+        </div>
+      </article>
+
+      <article class="swatch">
+        <div class="swatch__circle" style="background:#7C3AED" aria-hidden="true"></div>
+        <div class="swatch__meta">
+          <div class="swatch__name">Secondary / Grape</div>
+          <div class="swatch__hex">#7C3AED</div>
+          <button class="copy" data-hex="#7C3AED" aria-label="Copy #7C3AED">Copy</button>
+        </div>
+      </article>
+      <!-- /DUPLICATE -->
+    </div>
+  </section>
+
+<script>
+  // optional: click-to-copy hex codes
+  document.addEventListener('click', (e) => {
+    const btn = e.target.closest('.copy');
+    if (!btn) return;
+    const hex = btn.dataset.hex;
+    navigator.clipboard?.writeText(hex).then(() => {
+      const old = btn.textContent;
+      btn.textContent = 'Copied!';
+      setTimeout(() => (btn.textContent = old), 900);
+    });
+  });
+</script>
+</body>
+</html>
