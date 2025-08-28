@@ -140,13 +140,9 @@ nav {
 /** FOR COLORS: **/
 
 .board {
-  max-width: 42em;
+  max-width: 50em;
 }
-.board h1 {
-  margin: 0 0 1rem;
-  font-size: clamp(1.25rem, 1.5vw + 1rem, 2rem);
-  letter-spacing: .2px;
-}
+
 .palette {
   /* display: inline-block; */
   display: grid;
@@ -182,17 +178,16 @@ nav {
 }
 .swatch__name {
   padding-top: 1.22em;
-  font-size: small;
+  font-size: 12pt;
   margin-bottom: .15rem;
 }
 .swatch__hex {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
   color: var(--muted);
   font-size: .95rem;
 }
 .swatch__exp {
   padding-top: 1.22em;
-  font-size: small;
+  font-size: 12pt;
   margin-bottom: .15rem;
   font-style: italic;
 }
