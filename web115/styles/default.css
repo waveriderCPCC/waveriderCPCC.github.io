@@ -12,6 +12,10 @@
   --ring: rgba(255,255,255,.35);
 }
 
+.toptitle span {
+  display: none;
+}
+
 body {
   /* hi i am 
     main body contents 
