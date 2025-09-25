@@ -4,42 +4,143 @@
   <meta charset="UTF-8">
   <title>waverider • main</title>
   <link rel="icon" type="image/x-icon" href="/favicon.png">
-  <link rel="stylesheet" href="/web115/styles/default.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">    <script src="https://lint.page/kit/67ff88.js" crossorigin="anonymous"></script>
   <script src="https://lint.page/kit/67ff88.js" crossorigin="anonymous"></script>
 </head>
 <style>
-  body {
-    background-image: url(images/main.png);
+  :root {
+  --blue: #bae8f5;
+  --b: #9BE3F8;
+  --bg: #ecede8;
+  --gap: 1rem;
   }
+
+  h1 span {
+    display: none;
+  }
+
+  body {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+
+    color: #FBFBFB;
+
+    overflow-x: hidden;
+    background-image: url(images/main.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: 120% 120%;
+    font-size: 20px;
+    line-height: 1.5;
+    font-optical-sizing: auto;
+    font-style: normal;
+    text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.82);
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    top: -2%;
+    left: -1%;
+    width: calc(100% + 20px);
+    height: 400px;
+    background-image: linear-gradient(rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.5) 25%, rgba(0,0,0,0) 100%);
+    background-position: center;
+    background-size: 120%;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(10px);
+    z-index: -1;
+  }
+
   main {
     background-image: linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,0.12) 5%, rgba(0,0,0,0.12) 82%, rgba(0,0,0,0) 100%); 
     margin-left:-5%;
     margin-right: -5%;
     font-size: larger;
+    padding: 10%;
+    padding-top: 2%;
   }
-  main a {
-    font-size: 22px;
+
+  main a, footer a{
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
     font-weight: unset;
+    font-size: 22px;
+    text-decoration-line: underline;
+
+    color: #9BE3F8;
+
+    text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.8);
+
   }
+
+  /* waverider • home */
+  h1 {
+    text-align: center;
+    
+    font-family: "Nunito", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 44px;
+    /* identical to box height */
+
+    color: #000000;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    paint-order: stroke fill;
+    -webkit-text-stroke: 4px rgba(152, 213, 230, 0.2);
+    -webkit-text-fill-color: black;
+  }
+
+  header {
+    margin: 0;
+    padding: 0;
+    height: 7em; /* adjust height */
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+    /* you can change 90deg to 180deg, to top, to bottom, etc. */
+  }
+
+  footer {
+    text-align: center; 
+    padding-top: 4em;
+    text-shadow: none;
+    background-image: linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,0.2) 18%, rgba(0,0,0,0) 100%); 
+    padding-bottom: 5%;
+    margin-left:-5%;
+    margin-right: -5%;
+  }
+
 </style>
 <body>
     <header>
-      <h1 class="toptitle">waverider</h1>
+      <h1>waverider</h1>
     </header>
     <main>
-      <h2>main</h2>
-      <p>hi!! my name is liam (username wave/waverider) and this is my main page.</p>
-      <a href = "web115/index.html">click here to go to my WEB115 course.</a>
-      <br><br>
-      <p>a bit about myself:</p>
-      <p>i love working with computers and i have a passion for coding, math, making music, art, games, computers, and robots.</p>
+      <section>
+        <h2>main</h2>
+        <p>hi!! my name is liam (username wave/waverider) and this is my main page.</p>
+        <a href = "web115/index.html">click here to go to my WEB115 course.</a>
+        <br><br>
+        <section>
+          <h3>a bit about myself:</h3>
+          <p>i love working with computers and i have a passion for coding, math, making music, art, games, computers, and robots.</p>
+        </section>
       <p>i also co-captain a robotics team, FTC 16461, Infinite Turtles- seamlessly working with others while also mentoring newer members.</p>
+      </section>
     </main>
     <footer>
-
+      <a href="https://github.com/waveriderCPCC" target="_blank">GitHub</a> |
+      <a href="https://github.com/waverider" target="_blank">Main GitHub Account</a> |
+      <a href="https://16461.org">Infinite Turtles</a>
     </footer>
 </body>
 </html>

@@ -12,7 +12,7 @@
   --ring: rgba(255,255,255,.35);
 }
 
-.toptitle span {
+h1 span {
   display: none;
 }
 
@@ -62,7 +62,7 @@ main {
 }
 
 /* waverider • home */
-.toptitle {
+h1 {
   text-align: center;
   
   font-family: "Nunito", sans-serif;
