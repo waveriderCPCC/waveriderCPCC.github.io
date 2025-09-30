@@ -27,7 +27,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
-  background-size: 120% 120%;
+  background-size: 120% 140%;
   font-size: 20px;
   line-height: 1.5;
   font-optical-sizing: auto;
@@ -36,47 +36,38 @@ body {
 
 }
 
-body::before {
-  content: "";
-  position: absolute;
-  top: -2%;
-  left: -1%;
-  width: calc(100% + 20px);
-  height: 400px;
-  background-image: linear-gradient(rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.3) 25%, rgba(0,0,0,0) 100%);
-  background-position: center;
-  background-size: 120%;
-  background-position: center;
-  background-repeat: no-repeat;
-  filter: blur(10px);
-  z-index: -1;
-}
-
 main {
   padding: 2% 10%;
 }
 
+body::before {
+
+  filter: blur(10px);
+  z-index: -1;
+}
+
 /* waverider • home */
 h1 {
+  margin-top: 1em;
   text-align: center;
   
   font-family: "Nunito", sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 50px;
+  font-size: 42px;
   line-height: 44px;
   /* identical to box height */
 
   color: #000000;
 
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 1);
   paint-order: stroke fill;
-  -webkit-text-stroke: 4px rgba(152, 213, 230, 0.2);
-  -webkit-text-fill-color: black;
+  -webkit-text-stroke: 4px rgba(152, 213, 230, 0.5);
+  -webkit-text-fill-color: white;
 }
 
 header nav {
-  color: black;
+  color: white;
   text-align: center;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
@@ -85,22 +76,26 @@ header nav {
 }
 
 header {
+    color: white;
     margin: 0;
     padding: 0;
     height: 7em; /* adjust height */
     align-items: center;
     justify-content: center;
-    color: black;
     font-size: 24px;
     font-weight: bold;
     /* you can change 90deg to 180deg, to top, to bottom, etc. */
 }
 
 header a{
-  color: black;
+  transition: font-size .2s;
 }
 
-main a, footer a{
+header a:hover {
+  font-size: larger;
+}
+
+a{
   /* this is a link */
 
 font-family: 'Open Sans', sans-serif;

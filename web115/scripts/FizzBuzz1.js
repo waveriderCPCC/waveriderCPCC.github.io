@@ -8,14 +8,14 @@ function useForm(event) {
         console.log("form is empty. exiting...");
         return true;
     } else {
-        const welcome_message = document.getElementById("welcome_message");
-        welcome_message.innerText = "welcome to waverider's site, "+first.value;
+        const welcomeMessage = document.getElementById("welcome_message");
+        welcomeMessage.innerText = "welcome to waverider's site, "+first.value;
         if (!(mid.value==="")) {
-            welcome_message.innerText += " "+mid.value+".";
+            welcomeMessage.innerText += " "+mid.value+".";
         }
-        welcome_message.innerText += " "+last.value+"!";
+        welcomeMessage.innerText += " "+last.value+"!";
         // console.log("updated title.");
-        // console.log(welcome_message.innerText);
+        // console.log(welcomeMessage.innerText);
         // var amt = prompt("How high do you want to count, "+first.value+"?");
         var dd = document.getElementById("datas");
         var val = "";
