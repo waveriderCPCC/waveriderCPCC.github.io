@@ -10,114 +10,94 @@
   <script src="https://lint.page/kit/67ff88.js" crossorigin="anonymous"></script>
 </head>
 <style>
-  :root {
+:root {
   --blue: #bae8f5;
   --b: #9BE3F8;
   --bg: #ecede8;
   --gap: 1rem;
-  }
+}
 
-  h1 span {
-    display: none;
-  }
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  line-height: 1.5;
+  font-optical-sizing: auto;
 
-  body {
-    font-family: 'Open Sans', sans-serif;
-    font-style: normal;
+  color: #FBFBFB;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.82);
 
-    color: #FBFBFB;
+  overflow-x: hidden;
+  background: center / 120% 120% no-repeat fixed
+              url(images/abstract_blue_waves.png);
+}  
 
-    overflow-x: hidden;
-    background-image: url(images/main.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    background-size: 120% 120%;
-    font-size: 20px;
-    line-height: 1.5;
-    font-optical-sizing: auto;
-    font-style: normal;
-    text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.82);
-  }
+body::before {
+  content: "";
+  position: fixed;
+  top: -2%;
+  left: -1%;
+  width: calc(100% + 20px);
+  height: 400px;
+  z-index: -1;
 
-  body::before {
-    content: "";
-    position: fixed;
-    top: -2%;
-    left: -1%;
-    width: calc(100% + 20px);
-    height: 400px;
-    background-image: linear-gradient(rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.5) 25%, rgba(0,0,0,0) 100%);
-    background-position: center;
-    background-size: 120%;
-    background-position: center;
-    background-repeat: no-repeat;
-    filter: blur(10px);
-    z-index: -1;
-  }
+  background: center / 120% no-repeat
+              linear-gradient(rgba(255,255,255,0.5) 0%,
+                              rgba(255,255,255,0.5) 25%,
+                              rgba(0,0,0,0) 100%);
+  filter: blur(10px);
+}
 
-  main {
-    background-image: linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,0.12) 5%, rgba(0,0,0,0.12) 82%, rgba(0,0,0,0) 100%); 
-    margin-left:-5%;
-    margin-right: -5%;
-    font-size: larger;
-    padding: 10%;
-    padding-top: 2%;
-  }
+main {
+  margin: 0 -5%;
+  padding: 2% 10% 10%;
+  font-size: larger;
 
-  main a, footer a{
-    font-family: 'Open Sans', sans-serif;
-    font-style: normal;
-    font-weight: unset;
-    font-size: 22px;
-    text-decoration-line: underline;
+  background-image: linear-gradient(rgba(0,0,0,0) 0%,
+                                    rgba(0,0,0,0.12) 5%,
+                                    rgba(0,0,0,0.12) 82%,
+                                    rgba(0,0,0,0) 100%);
+}
 
-    color: #9BE3F8;
+a {  
+  font-size: 22px;
+  text-decoration: underline;
 
-    text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.8);
+  color: var(--b);
+  text-shadow: 0 0 2px rgba(255, 255, 255, 0.8);
+}
 
-  }
+h1 {
+  text-align: center;
+  font-family: "Nunito", sans-serif;
+  font-size: 50px;
+  line-height: 44px;
 
-  /* waverider • home */
-  h1 {
-    text-align: center;
-    
-    font-family: "Nunito", sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 50px;
-    line-height: 44px;
-    /* identical to box height */
+  color: #000;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  paint-order: stroke fill;
+  -webkit-text-stroke: 4px rgba(152, 213, 230, 0.2);
+  -webkit-text-fill-color: black;
+}
 
-    color: #000000;
+header {
+  margin: 0;
+  padding: 0;
+  height: 7em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    paint-order: stroke fill;
-    -webkit-text-stroke: 4px rgba(152, 213, 230, 0.2);
-    -webkit-text-fill-color: black;
-  }
+footer {
+  margin: 0 -5%;
+  padding: 4em 0 5%;
+  text-align: center;
+  text-shadow: none;
 
-  header {
-    margin: 0;
-    padding: 0;
-    height: 7em; /* adjust height */
-    align-items: center;
-    justify-content: center;
-    color: black;
-    font-size: 24px;
-    font-weight: bold;
-    /* you can change 90deg to 180deg, to top, to bottom, etc. */
-  }
-
-  footer {
-    text-align: center; 
-    padding-top: 4em;
-    text-shadow: none;
-    background-image: linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,0.2) 18%, rgba(0,0,0,0) 100%); 
-    padding-bottom: 5%;
-    margin-left:-5%;
-    margin-right: -5%;
-  }
+  background-image: linear-gradient(rgba(0,0,0,0) 0%,
+                                    rgba(0,0,0,0.2) 18%,
+                                    rgba(0,0,0,0) 100%);
+}
 
 </style>
 <body>
@@ -125,17 +105,18 @@
       <h1>waverider</h1>
     </header>
     <main>
+      <h2>main</h2>
       <section>
-        <h2>main</h2>
-        <p>hi!! my name is liam (username wave/waverider) and this is my main page.</p>
+        <h3>hi!!</h3>
+        <p>my name is liam (username wave/waverider) and this is my main page.</p>
         <a href = "web115/index.html">click here to go to my WEB115 course.</a>
         <br><br>
-        <section>
-          <h3>a bit about myself:</h3>
-          <p>i love working with computers and i have a passion for coding, math, making music, art, games, computers, and robots.</p>
-        </section>
-      <p>i also co-captain a robotics team, FTC 16461, Infinite Turtles- seamlessly working with others while also mentoring newer members.</p>
       </section>
+      <section>
+        <h3>a bit about myself:</h3>
+        <p>i love working with computers and i have a passion for coding, math, making music, art, games, computers, and robots.</p>
+      </section>
+      <p>i also co-captain a robotics team, FTC 16461, Infinite Turtles- seamlessly working with others while also mentoring newer members.</p>
     </main>
     <footer>
       <a href="https://github.com/waveriderCPCC" target="_blank">CPCC GitHub</a> |
