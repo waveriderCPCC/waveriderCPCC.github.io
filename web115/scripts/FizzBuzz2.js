@@ -1,3 +1,10 @@
+const firstDivisor = 3;
+const secondDivisor = 5;
+
+function checkDivision(number, value) {
+    return number % value === 0;
+}
+
 function useForm(event) {
     event.preventDefault(); // this stops the page from refreshing.
     const first = document.getElementById("first");
@@ -14,31 +21,22 @@ function useForm(event) {
             welcomeMessage.innerText += " "+mid.value+".";
         }
         welcomeMessage.innerText += " "+last.value+"!";
-        // console.log("updated title.");
-        // console.log(welcomeMessage.innerText);
-        // var amt = prompt("How high do you want to count, "+first.value+"?");
         var dd = document.getElementById("datas");
         var val = "";
         for (let i=1; i<=140; i++) {
             val = "";
             q = false;
-            if (i % 3 === 0) {
+            if (checkDivision(i, firstDivisor)) {
                 val+="WOAH";
-                q = true;
+                q=true;
             } 
-            if (i % 5 === 0) {
+            if (checkDivision(i, secondDivisor)) {
                 val+="CODE";
-                q = true;
+                q=true;
             }
             if (q===false) {
                 val = "robots";
             }
-            // dd.innerHTML = dd.innerHTML+
-            // "<li><span class=\"fc\">fun code</span>"
-            // +" - "
-            // +"the number is "
-            // +val
-            // +"</li>";
             dd.innerHTML = dd.innerHTML
                 + "<li>" + val + "!</li>";
         }
