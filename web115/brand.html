@@ -34,58 +34,57 @@
       </section>
       <section>
       <h3>header style</h3>
-      <p>all headers are stylistically mostly lower case. paragraphs are also lower case but not always.</p>
-      <p>the title uses <b>Nunito</b>, a drop shadow, and a subtle blue stroke that shows through to the background (color #4), besides also being filled with black:</p>
+      <p>all headers are stylistically lower case. paragraphs are also lower case but not always.</p>
+      <p>the title uses <b>Nunito</b>, a drop shadow, and a subtle blue stroke that shows through to the background (color #4), besides also being filled with white:</p>
       <pre>
         <code>
         h1 {
-          text-align: center;
-
+          margin-top: 1em;  
           font-family: "Nunito", sans-serif;
           font-style: normal;
           font-weight: 700;
-          font-size: 50px;
+          font-size: 42px;
           line-height: 44px;
-      
+
           color: #000000;
-      
-          text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+          text-shadow: 0px 4px 4px rgba(0, 0, 0, 1);
           paint-order: stroke fill;
-          -webkit-text-stroke: 4px rgba(152, 213, 230, 0.2);
-          -webkit-text-fill-color: black;
+          -webkit-text-stroke: 4px rgba(152, 213, 230, 0.5);
+          -webkit-text-fill-color: white;
         }
         </code>
       </pre>
       <p>the top nav bar uses this styling, as well as the font <b>Poppins</b>:</p>
       <pre>
       <code>
-        .topmenu {
-          color: black;
+        header nav {
+          color: white;
           text-align: center;
           font-family: "Poppins", sans-serif;
           font-weight: 400;
           font-size: 18px;
-          text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+          text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         }
       </code>
       </pre>
       </section>
       <section>
       <h3>font examples</h3>
-      <div class="fonts">
-        <p style="font-size: larger;">this font is <b>Open Sans</b>, being used for mostly everything.</p>
-        <p style="font-size: larger; font-family: 'Poppins', sans-serif;">this is <b>Poppins</b>, used for the top navbar.</p>
-        <p style="font-size: larger; font-family: 'Nunito', sans-serif;">this is a small example of the title font, <b>Nunito</b></p>
-      </div>
+      <ul class="fonts">
+        <li style="font-size: larger;">this font is <b>Open Sans</b>, being used for mostly everything.</li>
+        <li style="font-size: larger; font-family: 'Poppins', sans-serif;">this is <b>Poppins</b>, used for the top navbar.</li>
+        <li style="font-size: larger; font-family: 'Nunito', sans-serif;">this is a small example of the title font, <b>Nunito</b></li>
+      </ul>
       </section>
       <section>
       <h3>gradients</h3>
       <p>the footer has a gradient from clear, to a subtle black, and back to clear:</p>
-      <code><span style="color: var(--b);">background-image: linear-gradient</span>(<span style="color: var(--b);">rgba</span>(0,0,0,0) 0%, 
+      <code>
+        <span style="color: var(--b);">background-image: linear-gradient</span>(<span style="color: var(--b);">rgba</span>(0,0,0,0) 0%, 
         <span style="color: var(--b);">rgba</span>(0,0,0,0.2) 18%, 
         <span style="color: var(--b);">rgba</span>(0,0,0,0) 100%);
       </code>
-      <div class="footerx"></div>
       </section>
       <section>
       <h3>images</h3>

@@ -46,17 +46,13 @@ body::before {
   z-index: -1;
 }
 
-/* waverider • home */
 h1 {
-  margin-top: 1em;
-  text-align: center;
-  
+  margin-top: 1em;  
   font-family: "Nunito", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 42px;
   line-height: 44px;
-  /* identical to box height */
 
   color: #000000;
 
@@ -81,6 +77,7 @@ header {
     padding: 0;
     height: 7em; /* adjust height */
     align-items: center;
+    text-align: center;
     justify-content: center;
     font-size: 24px;
     font-weight: bold;
@@ -109,7 +106,7 @@ text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.8);
 
 }
 
-footer nav {
+footer {
   text-align: center; 
   padding-top: 4em;
   text-shadow: none;
@@ -117,6 +114,10 @@ footer nav {
   padding-bottom: 5%;
   margin-left:-5%;
   margin-right: -5%;
+}
+
+footer blockquote {
+  padding-bottom: 15px;
 }
 
 figure {
@@ -133,59 +134,46 @@ figure img {
 
 .board {
   max-width: 50em;
-}
+}  
 
 .palette {
-  /* display: inline-block; */
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: var(--gap);
+  grid-template-columns: auto 160px 1fr; /* circle | meta | explanation */
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
 }
-.swatch {
-  display: grid;
-  justify-items: center;
-  gap: .6rem;
-  padding: 1rem;
-  background: rgba(255,255,255,.04);
-  border-radius: 1rem;
-  border: 1px solid rgba(255,255,255,.08);
-  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
-}
-.swatch:focus-within,
-.swatch:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0,0,0,.35);
-  border-color: var(--ring);
-}
+
 .swatch__circle {
-  width: var(--swatch-size);
-  height: var(--swatch-size);
-  border-radius: var(--radius);
-  border: 2px solid rgba(255,255,255,.5); /* subtle rim so light colors still read */
-  box-shadow: inset 0 0 0 1px rgba(0,0,0,.08);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.08);
+  justify-self: center;
 }
+
 .swatch__meta {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   line-height: 1.25;
 }
+
 .swatch__name {
-  padding-top: 1.22em;
   font-size: 12pt;
-  margin-bottom: .15rem;
+  margin-bottom: 0.15rem;
 }
+
 .swatch__hex {
   color: var(--muted);
-  font-size: .95rem;
+  font-size: 0.95rem;
 }
+
 .swatch__exp {
-  padding-top: 1.22em;
   font-size: 12pt;
-  margin-bottom: .15rem;
   font-style: italic;
-}
-/* respect reduced motion */
-@media (prefers-reduced-motion: reduce) {
-  .swatch { transition: none; }
+  line-height: 1.4;
 }
 
 /* COLORS OVER */
