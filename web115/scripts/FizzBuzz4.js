@@ -43,6 +43,9 @@ function useForm(event) {
                 q=true;
             }
             if (q===false) {
+                if (defaultWord.value==="") {
+                    val = "";
+                }
                 val += defaultWord.value;
             }
             dd.innerHTML = dd.innerHTML
