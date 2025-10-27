@@ -21,7 +21,7 @@ function useForm(event) {
             welcomeMessage.innerText += " "+mid.value+".";
         }
         welcomeMessage.innerText += " "+last.value+"!";
-        var dd = document.getElementById("datas");
+        var dd = document.getElementById("output");
         var val = "";
         for (let i=1; i<=140; i++) {
             val = "";

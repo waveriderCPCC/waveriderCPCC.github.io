@@ -17,7 +17,7 @@ function useForm(event) {
         console.log("updated title.");
         console.log(welcomeMessage.innerText);
         var amt = prompt("How high do you want to count, "+first.value+"?");
-        var dd = document.getElementById("datas");
+        var dd = document.getElementById("output");
         var val = "";
         for (let i=0; i<amt; i++) {
             if (i % 2 === 0) {

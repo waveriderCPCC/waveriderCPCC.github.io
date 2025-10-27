@@ -10,14 +10,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <script src="https://lint.page/kit/67ff88.js" crossorigin="anonymous"></script>
     <title>liam oppenheimer's leaping oryx ^ web115 ^ fizzbuzz2</title>
-    <script src="scripts/FizzBuzz3.js" defer></script>
+    <script src="scripts/FizzBuzz4.js" defer></script>
     <script src="scripts/HTMLInclude.js" defer></script>
 </head>
 <body>
     <div data-include="components/header.html"></div>
     <main>
-      <h2>fizz buzz 3</h2>
+      <h2>fizz buzz 4</h2>
       <h3 id="welcome_message">welcome to waverider's site.</h3>
+      <p><em>Fizz Buzz</em> is a programming exercise - it also originally is a group division word game.</p>
+      <p>players take turns counting up; replacing each number divisible by three (n%3=0) with "fizz", and five with "buzz" (n%5=0).</p>
+      <p>the numbers that are divisible by both 3 and 5 are replaced with "fizzbuzz".</p>
+      <br>
+      <p>this program is a model of fizz buzz - you can specify <strong>three</strong> numbers, and the words that they trigger.</p>
+      <p>you can also enter the default word, which is outputted when a number is not divisible by any of the provided numbers.</p>
+      <p><strong>why don't you give it a try?</strong></p>
+      <br>
       <form id="form">
         <label for="first">First Name</label>
         <input type="text" name="first" id="first" required>
@@ -28,6 +36,26 @@
         <label for="last">Last Name</label>
         <input type="text" name="last" id="last">
         <br>   
+        <label for="n1">Number</label>
+        <input type="number" name="n1" id="n1">
+        <label for="w1">Word</label>
+        <input type="text" name="w1" id="w1" value="WOAH">
+        <br>
+        <label for="n2">Number</label>
+        <input type="number" name="n2" id="n2">
+        <label for="w2">Word</label>
+        <input type="text" name="w2" id="w2" value="CODE">
+        <br>
+        <label for="n3">Number</label>
+        <input type="number" name="n3" id="n3">
+        <label for="w3">Word</label>
+        <input type="text" name="w3" id="w3" value="BANG!">
+        <br>
+        <label for="lines">Line Count</label>
+        <input type="number" name="lines" id="lines" value="125">
+        <label for="default_word">Default Word</label>
+        <input type="text" name="default_word" id="default_word" value="robots">
+        <br>
         <input id="submit" type="submit" value="submit">
       </form>
       <ol id="output"></ol>

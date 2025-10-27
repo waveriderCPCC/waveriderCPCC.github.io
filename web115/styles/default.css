@@ -85,12 +85,12 @@ header {
 }
 
 header a{
-  transition: font-size .2s;
+  /* transition: font-size .2s; */
 }
 
-header a:hover {
+/* header a:hover {
   font-size: larger;
-}
+} */
 
 a{
   /* this is a link */
@@ -144,6 +144,7 @@ figure img {
 }
 
 .swatch__circle {
+  box-sizing: border-box;
   width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -186,4 +187,20 @@ figure img {
 blockquote {
   text-align: center
 }
+
+footer>em {
+  display: block;
+  padding-top: 20px;
+  font-size: 18px;
+  font-weight: normal;
+}  
+
+form span {
+  padding: 1em;
+}  
+
+/* form input {
+  width: 50px;
+} */
+
 
