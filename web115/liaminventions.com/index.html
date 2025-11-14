@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://lint.page/kit/67ff88.js" crossorigin="anonymous"></script>
+    <title>Business Card</title>
+    <style>  
+        * {
+            box-sizing: border-box;
+        }  
+
+        :root {
+            --b: #CCF4FF;
+            --bl: #808080;
+        }  
+
+        @font-face {
+            font-family: "dvmono";
+            src: url("assets/fonts/DejaVuSansMono.ttf");
+        }  
+
+        @font-face {
+            font-family: "dvmonoh";
+            src: url("assets/fonts/DejaVuSansMono-BoldOblique.ttf");
+        }  
+
+        body {
+            background-color: #08131F;
+        }  
+        .card {
+            padding: 3vw;
+            background-image: url(assets/bg2.png);
+            background-size: cover;  
+            background-position: 10%;
+            overflow: auto; 
+            width: 80vw;  
+            border: 0.2vw solid grey;
+            box-shadow: 
+                0 0 12px 8px rgba(0, 0, 0, 0.8);
+            /* vistaprint business card dimensions are 2.12x3.62. */
+            /* we will simulate this by multiplying the width by 2.12 */
+            /* then dividing by 3.62 */
+            /* this is a good approximation of the height if the width is 80vw. */
+            height: calc(2.12 * (80vw / 3.62)); 
+            border-radius: 6vw;  
+            margin: auto;  
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            overflow: hidden;
+        }  
+
+        img {
+            width: 7.8vw;
+            align-self: flex-start;
+            padding-right: 1.8vw;
+        }  
+
+        .title {
+            display: flex;
+            flex-flow: row nowrap;
+        }  
+
+        h1 {
+            font-family: dvmonoh;
+            color: var(--b);  
+            font-size: 3.2vw;
+            align-self: flex-start;
+            font-weight: 100;
+            position: relative;
+            bottom: 1vw;
+        }  
+
+        pre {
+            font-family: dvmono;
+            color: var(--b);
+            font-size: 2.4vw;
+            position: relative;
+            left: -17vw;
+            bottom: 6vw;  
+            line-height: 150%; 
+        }
+
+        .white {
+            color: white;
+        }  
+
+        span:not(.white) {
+            color: var(--bl);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="title">
+            <img src="assets/favicon-hq.png" alt="the logo; a stylised up arrow. It is white with a slightly clear blue stroke.  ">
+            <h1>Liam's Inventions</h1>  
+        </div>  
+        <div class="info">
+            <pre><code>
+            <span class="white">{</span>  
+              <span>"name"</span>     <span class="white">:</span> Liam Oppenheimer  
+              <span>"title"</span>    <span class="white">:</span> Software Engineer
+              <span>"email"</span>    <span class="white">:</span> loppenh0@email.cpcc.edu
+              <span>"site"</span>     <span class="white">:</span> waveridercpcc.github.io
+              <span>"phone"</span>    <span class="white">:</span> 980-310-9653
+              <span>"address"</span>  <span class="white">:</span> 225 Tillbury Circle, Charlotte NC 
+                           26275
+            <span class="white">}</span>
+            </code></pre>
+        </div>
+    </div>  
+</body>
+</html>
