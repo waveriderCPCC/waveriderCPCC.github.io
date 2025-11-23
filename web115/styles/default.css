@@ -3,6 +3,7 @@
   --b: #9BE3F8;
   --bg: #ecede8;
   --gap: 1rem;
+  --glass: rgba(152, 213, 230, 0.5);
   /* colors: */
   --radius: 999px; /* full pill/circle */
   --swatch-size: 88px; /* adjust circle size */
@@ -58,7 +59,7 @@ h1 {
 
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 1);
   paint-order: stroke fill;
-  -webkit-text-stroke: 4px rgba(152, 213, 230, 0.5);
+  -webkit-text-stroke: 4px var(--glass);
   -webkit-text-fill-color: white;
 }
 
@@ -203,4 +204,36 @@ form span {
   width: 50px;
 } */
 
+table {
+	text-align: left;
+  border: 2px solid var(--blue);
+  border-radius: 12px;
+  border-collapse: separate;  
+  overflow: hidden;         
+}  
 
+td, th {
+  padding: 0 1.22vw;
+  border: 4px solid var(--glass);
+  border-left:none;
+  border-top:none;  
+}  
+
+table .total > td, 
+table .total > th {
+  background-color: var(--glass);
+}   
+
+table .total > th { 
+  border-bottom-left-radius: 12px;
+}
+
+table tr:first-child th:first-child {
+  border-top-left-radius: 12px;
+}  
+
+table tr:first-child th:last-child {
+  border-top-right-radius: 12px;
+}  
+
+  
