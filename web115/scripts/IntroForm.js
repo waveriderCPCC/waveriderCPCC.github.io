@@ -78,7 +78,7 @@ document.getElementById('form').addEventListener('submit', (e) => {
     o += `<li><strong>Courses I’m Taking, & Why:</strong><ul>`;
 
     for (let i=0; i<courses.length; i++) {
-        o += `<li><strong>${courses[i]}</strong> ${reasons[i]}</li>`;
+        o += `<li><strong>${courses[i]}:</strong> ${reasons[i]}</li>`;
     }  
 
     o += `</ul>`;
