@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <link rel="stylesheet" href="styles/default.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://lint.page/kit/67ff88.js" crossorigin="anonymous"></script>
+    <title>liam oppenheimer's leaping oryx ^ web115 ^ introduction form</title>
+    <script src="scripts/HTMLInclude.js" defer></script>
+    <script src="scripts/IntroForm.js" defer></script>
+    <style>
+        label {    
+            display: block;
+            margin-bottom: 10px;
+            padding: unset;
+        }
+    </style>
+</head>
+
+<body>
+    <div data-include="components/header.html"></div>
+    <main>
+      <h2>introduction form</h2>   
+      <form id="form">
+        <label for="hi">Greeting: </label>
+        <input name="hi" id="hi" type="text" value ="hi!"><br>
+        <label for="bio">Bio: </label>
+        <textarea name="bio" id="bio">Hi, I'm Liam! My pronouns are they/she/he (default to they) and I’m a High School junior in the CCP Dual Enrollment program. This is my first year here, and I am currently enrolled in 2 AP classes, and 3 CPCC classes this semester. I love working with computers and I have a passion for coding, math, making music, art, games, computers, and robots. I also co-captain a robotics team, FTC #16461, Infinite Turtles- seamlessly working with others while also mentoring newer members. I also designed the current arm of the robot on my team.</textarea><br>
+        <label for="imagesrc">Image:</label>
+        <input type="file" id="imagesrc" name="imagesrc" accept="image/*">
+        <label for="caption">Image Caption:</label>
+        <textarea name="caption" id="caption">At Carolinas Premier Event<br>
+(2025 FTC Competition, I’m the driver on the left in the photo)</textarea>
+        <label for="personal">Personal Background: </label>
+        <textarea name="personal" id="personal">I started my life in Southern California before moving to Charlotte.
+<br>As of writing this, I am 17 years old. (I was born in 2008)</textarea><br>
+        <label for="professional">Professional Background: </label>
+        <textarea name="professional" id="professional">Former IT Intern at Little Diversified (Maintained and repaired employee hardware and prepped computers for donation to E2D. Also handled some tickets.), Continued Collins Aerospace Partnership to manufacture custom additive titanium parts for my robotics team, volunteered at the Matthews Alive Festival and at a Discovery Place Booth (both also for my team). Also founded and mentored another robotics team (FTC #24078) for 2 years.</textarea><br>
+        <label for="academic">Academic Background: </label>
+        <textarea name="academic" id="academic">Current Dual Enrollment here at CPCC/STEAM homeschool program, including classes in upper-level math and science. Successful completion of AP CSA. GPA 4.3. ITE JS certificate program completion scheduled Spring 2026 and Associates in Science scheduled Spring 2027.</textarea><br>
+        <label for="computer">Primary Computer: </label>
+        <textarea name="computer" id="computer">Framework Laptop 16 (AMD Ryzen 9 7040 Series) with Discrete AMD Radeon RX 7700S GPU. OS is Arch Linux with Hyprland, waybar, swww, eww, wofi, (etc…), and custom configs (though I also dual-boot with Windows 11). Primary working location is my desk at home, though I set up anywhere.</textarea>
+        <fieldset><legend>Courses</legend>
+            <label for="course">Course:</label>
+            <input type="text" id="course" name="course" value="MAT271 - Calculus I"><br>
+            <label for="reason">Reason:</label>
+            <textarea id="reason" name="reason">I am taking this because it's required, and I also love math.</textarea><br>
+            <button id="addCourseButton" type="button">Add Course</button><br><br>
+
+            <div id="courseEntries">
+            <div>
+                <label for="course0">Course:</label>
+            <input type="text" id="course0" name="course" value="ACA112 - College Transfer Success">
+            <br>
+            <label for="reason0">Reason:</label>
+            <textarea id="reason0" name="reason">A required course to get me used to CPCC</textarea><br>
+        
+            <button type="button" class="removeCourseButton" data-index="-1">Remove</button>
+            <br><br></div>
+
+            <div>
+            <label for="course1">Course:</label>
+            <input type="text" id="course1" name="course" value="ENG111 - Writing and Inquiry">
+            <br>
+            <label for="reason1">Reason:</label>
+            <textarea id="reason1" name="reason">Also required, but writing is also super important. (I’m writing right now!)</textarea><br>
+        
+            <button type="button" class="removeCourseButton" data-index="0">Remove</button>
+            <br><br></div>
+<div>
+            <label for="course2">Course:</label>
+            <input type="text" id="course2" name="course" value="WEB115 - Web Markup and Scripting (this class!)">
+            <br>
+            <label for="reason2">Reason:</label>
+            <textarea id="reason2" name="reason">Because I want to improve and optimize my web-building skills.</textarea><br>
+        
+            <button type="button" class="removeCourseButton" data-index="1">Remove</button>
+            <br><br></div>
+            </div>  
+        </fieldset>  
+        <label for="funny">Funny/Interesting Item to Remember Me by: </label>
+        <textarea name="funny" id="funny">I actually am (update: was!) on vacation at a Lake Michigan beach while I’m doing college, which I think is pretty funny.</textarea><br>
+        <label for="extra">I’d Also Like to Share:  </label>
+        <textarea name="extra" id="extra">I built an 8-bit computer from the ground up! I prototyped, made schematics, designed and laid out a PCB, got it made, assembled it, programmed an “OS” and some simple games and test programs. I also made changes to a FAT32 SD card library for the CPU I am using on this (6502), and added file creation/writing! (previously not supported)</textarea><br>
+        <button type="submit">Submit</button>
+      </form>  
+      <div id="results"></div>
+    </main>
+    <div data-include="components/footer.html"></div>
+</body>
+</html>
