@@ -83,7 +83,7 @@ document.getElementById('form').addEventListener('submit', (e) => {
 
     o += `</ul>`;
     o += `<li><strong>Funny/Interesting Item to Remember Me by:</strong> ${formData.get('funny')}</li>`;
-    o += `<li><strong>I’d Also Like to Share</strong> ${formData.get('extra')}</li>`;
+    o += `<li><strong>I’d Also Like to Share:</strong> ${formData.get('extra')}</li>`;
     
     document.getElementById('results').innerHTML = o;
 });  
