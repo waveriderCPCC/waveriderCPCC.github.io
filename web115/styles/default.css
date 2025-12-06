@@ -42,18 +42,19 @@ main {
 }
 
 body::before {
-
   filter: blur(10px);
   z-index: -1;
 }
 
 h1 {
-  margin-top: 1em;  
   font-family: "Nunito", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 42px;
   line-height: 44px;
+
+  flex-grow: 1;
+  align-self: center;
 
   color: #000000;
 
@@ -75,6 +76,8 @@ header nav {
 header {
     color: white;
     margin: 0;
+      margin-bottom: 2em;
+
     padding: 0;
     height: 7em; /* adjust height */
     align-items: center;
@@ -85,8 +88,25 @@ header {
     /* you can change 90deg to 180deg, to top, to bottom, etc. */
 }
 
-header a{
-  /* transition: font-size .2s; */
+/*header a{
+   transition: font-size .2s; 
+}  */
+
+header div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-content: flex-start;
+  align-items: flex-start;
+  max-width: 80vw;
+  margin: 0 auto;
+} 
+
+header div img {
+  width: 12%;
+  align-self: center;
+  margin: 20px
 }
 
 /* header a:hover {
