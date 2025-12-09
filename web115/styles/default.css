@@ -24,12 +24,12 @@ body {
   color: #FBFBFB;
 
   overflow-x: hidden;
+  background-color: black;
   background-image: url(/web115/images/bg2.png);
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
   background-size: 120% 140%;
-  background-color: black;
   font-size: 20px;
   line-height: 1.5;
   font-optical-sizing: auto;
@@ -289,11 +289,14 @@ fieldset textarea {
   width: 15vw;
   height:2vw;
 }  
-body::before {
+
+
+
+/* body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.45); /* adjust 0.45 → darker or lighter */
+  background: rgba(0, 0, 0, 0.45); 
   pointer-events: none;
   z-index: -1;
-}
+} */
