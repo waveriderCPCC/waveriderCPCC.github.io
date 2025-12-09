@@ -58,7 +58,7 @@ h1 {
   align-self: center;
 
   color: #FFFFFF;
-  
+
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 1);
   paint-order: stroke fill;
   -webkit-text-stroke: 4px var(--glass);
@@ -97,7 +97,7 @@ header div {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-content: flex-start;
   align-items: flex-start;
   max-width: 80vw;
@@ -125,7 +125,7 @@ text-decoration-line: underline;
 color: #9BE3F8;
 text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.8);
 
-}
+}  
 
 footer {
   text-align: center; 
@@ -135,7 +135,7 @@ footer {
   padding-bottom: 5%;
   margin-left:-5%;
   margin-right: -5%;
-}
+}  
 
 footer blockquote {
   padding-bottom: 15px;
