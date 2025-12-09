@@ -100,7 +100,7 @@ header div {
   justify-content: space-around;
   align-content: flex-start;
   align-items: flex-start;
-  max-width: 80vw;
+  max-width: 60vw;
   margin: 0 auto;
 } 
 
@@ -290,7 +290,9 @@ fieldset textarea {
   height:2vw;
 }  
 
-
+.preview {
+  width: 25vw
+}
 
 /* body::before {
   content: "";
