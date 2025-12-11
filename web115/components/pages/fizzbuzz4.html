@@ -1,0 +1,47 @@
+
+      <script src="scripts/FizzBuzz4.js" defer></script>
+      <h2>fizz buzz 4</h2>
+      <h3 id="welcome_message">welcome to waverider's site.</h3>
+      <p><em>Fizz Buzz</em> is a programming exercise - it also originally is a group division word game.</p>
+      <p>players take turns counting up; replacing each number divisible by three (n%3=0) with "fizz", and five with "buzz" (n%5=0).</p>
+      <p>the numbers that are divisible by both 3 and 5 are replaced with "fizzbuzz".</p>
+      <br>
+      <p>this program is a model of fizz buzz - you can specify <strong>three</strong> numbers, and the words that they trigger.</p>
+      <p>you can also enter the default word, which is outputted when a number is not divisible by any of the provided numbers.</p>
+      <p><strong>why don't you give it a try?</strong></p>
+      <br>
+      <form id="form">
+        <label for="first">First Name</label>
+        <input type="text" name="first" id="first" required>
+        <br>
+        <label for="mid">Middle Initial</label>
+        <input type="text" name="mid" id="mid" maxlength="1">
+        <br>
+        <label for="last">Last Name</label>
+        <input type="text" name="last" id="last">
+        <br>   
+        <label for="n1">Number 1</label>
+        <input type="number" name="n1" id="n1">
+        <label for="w1">Word 1</label>
+        <input type="text" name="w1" id="w1" value="WOAH">
+        <br>
+        <label for="n2">Number 2</label>
+        <input type="number" name="n2" id="n2">
+        <label for="w2">Word 2</label>
+        <input type="text" name="w2" id="w2" value="CODE">
+        <br>
+        <label for="n3">Number 3</label>
+        <input type="number" name="n3" id="n3">
+        <label for="w3">Word 3</label>
+        <input type="text" name="w3" id="w3" value="BANG!">
+        <br>
+        <label for="lines">Line Count</label>
+        <input type="number" name="lines" id="lines" value="125">
+        <label for="default_word">Default Word</label>
+        <input type="text" name="default_word" id="default_word" value="robots">
+        <br>
+        <input id="submit" type="submit" value="submit">
+      </form>
+      <h3>output:</h3>
+      <ol id="output"></ol>
+
