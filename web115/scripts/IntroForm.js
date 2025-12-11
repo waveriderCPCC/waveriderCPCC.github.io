@@ -6,15 +6,15 @@ function initCourseForm() {
         return;
     }
 
-    function updatePreview(input, target) {
-        let file = input.files[0];
-        let reader = new FileReader();
+    // function updatePreview(input, target) {
+    //     let file = input.files[0];
+    //     let reader = new FileReader();
 
-        reader.readAsDataURL(file);
-        reader.onload = function () {
-            document.getElementById(target).src = reader.result;
-        };
-    }
+    //     reader.readAsDataURL(file);
+    //     reader.onload = function () {
+    //         document.getElementById(target).src = reader.result;
+    //     };
+    // }  
 
     document
       .getElementById('addCourseButton')
