@@ -7,7 +7,7 @@ const main = document.querySelector("main");
 async function loadInto(el, url) {
     const html = await fetch(url).then((r) => r.text());
     el.innerHTML = html;
-    console.log(el.innerHTML);
+    // console.log(el.innerHTML);
     // lets get the scripts so we can run them
     const scripts = el.querySelectorAll("script");
     // iterate through them to move them to document root
@@ -26,23 +26,59 @@ async function loadInto(el, url) {
         // replace so it actually executes
         oldScript.replaceWith(newScript);
     }  
-    document.title = `liam oppenheimer's leaping oryx ^ web115 ^ ${document.querySelector("h2").innerText}`
 }  
 
-function switchPage(a) {
-  if (a.id.includes("reload")) {
+function switchPage(id,href) {
+  if (id.includes("reload")) {
     console.log("leaving page");
     window.location.href = a.href;
   } else {
     main.innerHTML = '';  
-    console.log(main.innerHTML);
-    loadInto(main, `components/pages/${a.id}.html`);
+    // console.log(main.innerHTML);
+    // load content
+    loadInto(main, `components/pages/${id}.html`);
+    // update title
+    const title = `liam oppenheimer's leaping oryx ^ web115 ^ ${document.querySelector("h2").innerText}`;
+    document.title = title;
+    // push page state to browser stack
+    // this doesn't help if we cant load the new url
+    // const stateObj = { info: 'updated-url-without-reload', page: id };
+    // history.pushState(stateObj, document.title, `/${id}`);
   }
 }  
 
 header.addEventListener("click", (e) => {
   e.preventDefault();
   if (e.target.tagName === 'A') {
-    switchPage(e.target);
+    switchPage(e.target.id, e.target.href);
   }
 });  
+
+// bookmarks wont work until i learn how to do something server-side i think
+
+// function handleRouting() {
+//     const path = window.location.pathname;
+
+//     if (path === '/') {
+//         switchPage('index');
+//     } else {
+//     } else if (path.startsWith('/product/')) {
+//         // Extract the ID from the URL: e.g., '/product/123'
+//         const parts = path.split('/');
+//         const productId = parts[parts.length - 1];
+//         displayContent(`product ID: ${productId}`);
+//     } else if (path.startsWith('/about')) {
+//         displayContent('about');
+//     } else {
+//         displayContent('notFound');
+//     }
+// }
+
+// window.addEventListener('popstate', (event) => {
+//     if (event.state && event.state.page) {
+//         switchPage(event.state.page, '');
+//     } else {
+//         switchPage('index');
+//     }
+// });  
+
