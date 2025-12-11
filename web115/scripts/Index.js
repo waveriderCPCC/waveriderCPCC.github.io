@@ -1,6 +1,8 @@
 const header = document.querySelector("header");
 const main = document.querySelector("main");
 
+let currentId = "home";
+
 // i've added this async/await function
 // since htmlinclude wouldnt work from here
 // this works tho
@@ -28,29 +30,36 @@ async function loadInto(el, url) {
     }  
 }  
 
-function switchPage(id,href) {
+async function switchPage(id,href) {
   if (id.includes("reload")) {
     console.log("leaving page");
-    window.location.href = a.href;
-  } else {
-    main.innerHTML = '';  
+    window.location.href = href;
+  } else { 
     // console.log(main.innerHTML);
-    // load content
-    loadInto(main, `components/pages/${id}.html`);
-    // update title
-    const title = `liam oppenheimer's leaping oryx ^ web115 ^ ${document.querySelector("h2").innerText}`;
-    document.title = title;
-    // push page state to browser stack
-    // this doesn't help if we cant load the new url
-    // const stateObj = { info: 'updated-url-without-reload', page: id };
-    // history.pushState(stateObj, document.title, `/${id}`);
-  }
+    // only update if we are going to a different place
+    if (id !== currentId) {
+      main.innerHTML = ''; 
+      currentId = id;
+      // load content
+      await loadInto(main, `components/pages/${id}.html`);
+      const h2 = document.querySelector("h2");
+      if (h2) {
+        const title = `liam oppenheimer's leaping oryx ^ web115 ^ ${h2.innerText}`;
+        // update title
+        document.title = title;
+      }
+      // push page state to browser stack
+      // this doesn't help if we cant load the new url
+      // const stateObj = { info: 'updated-url-without-reload', page: id };
+      // history.pushState(stateObj, document.title, `/${id}`);
+    }  
+  }  
 }  
 
-header.addEventListener("click", (e) => {
+header.addEventListener("click", async (e) => {
   e.preventDefault();
   if (e.target.tagName === 'A') {
-    switchPage(e.target.id, e.target.href);
+    await switchPage(e.target.id, e.target.href);
   }
 });  
 
