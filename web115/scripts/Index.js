@@ -7,38 +7,38 @@ let currentId = "home";
 // since htmlinclude wouldnt work from here
 // this works tho
 async function loadInto(el, url) {
-    const html = await fetch(url).then((r) => r.text());
-    el.innerHTML = html;
-    // console.log(el.innerHTML);
-    // lets get the scripts so we can run them
-    const scripts = el.querySelectorAll("script");
-    // iterate through them to move them to document root
-    for (const oldScript of scripts) {
-        const newScript = document.createElement("script");
-        if (oldScript.src) {
-            newScript.src = oldScript.src;
-        } else {
-            newScript.textContent = oldScript.textContent;
-        }  
-        // copy attributes (cursed)
-        for (const attr of oldScript.attributes) {
-            newScript.setAttribute(attr.name, attr.value);
-        }
+  const html = await fetch(url).then((r) => r.text());
+  el.innerHTML = html;
+  // console.log(el.innerHTML);
+  // lets get the scripts so we can run them
+  const scripts = el.querySelectorAll("script");
+  // iterate through them to move them to document root
+  for (const oldScript of scripts) {
+    const newScript = document.createElement("script");
+    if (oldScript.src) {
+      newScript.src = oldScript.src;
+    } else {
+      newScript.textContent = oldScript.textContent;
+    }
+    // copy attributes (cursed)
+    for (const attr of oldScript.attributes) {
+      newScript.setAttribute(attr.name, attr.value);
+    }
 
-        // replace so it actually executes
-        oldScript.replaceWith(newScript);
-    }  
-}  
+    // replace so it actually executes
+    oldScript.replaceWith(newScript);
+  }
+}
 
-async function switchPage(id,href) {
+async function switchPage(id, href) {
   if (id.includes("reload")) {
     console.log("leaving page");
     window.location.href = href;
-  } else { 
+  } else {
     // console.log(main.innerHTML);
     // only update if we are going to a different place
     if (id !== currentId) {
-      main.innerHTML = ''; 
+      main.innerHTML = "";
       currentId = id;
       // load content
       await loadInto(main, `components/pages/${id}.html`);
@@ -52,16 +52,16 @@ async function switchPage(id,href) {
       // this doesn't help if we cant load the new url
       // const stateObj = { info: 'updated-url-without-reload', page: id };
       // history.pushState(stateObj, document.title, `/${id}`);
-    }  
-  }  
-}  
+    }
+  }
+}
 
 header.addEventListener("click", async (e) => {
   e.preventDefault();
-  if (e.target.tagName === 'A') {
+  if (e.target.tagName === "A") {
     await switchPage(e.target.id, e.target.href);
   }
-});  
+});
 
 // bookmarks wont work until i learn how to do something server-side i think
 
@@ -89,5 +89,4 @@ header.addEventListener("click", async (e) => {
 //     } else {
 //         switchPage('index');
 //     }
-// });  
-
+// });

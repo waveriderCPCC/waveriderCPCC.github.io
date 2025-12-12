@@ -1,106 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>waverider</title>
-  <link rel="icon" type="image/x-icon" href="/favicon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">    <script src="https://lint.page/kit/67ff88.js" crossorigin="anonymous"></script>
-  <script src="https://lint.page/kit/67ff88.js" crossorigin="anonymous"></script>
-</head>
-<style>
-:root {
-  --blue: #bae8f5;
-  --b: #9BE3F8;
-  --bg: #ecede8;
-  --gap: 1rem;
-}
+  <head>
+    <meta charset="UTF-8" />
+    <title>waverider</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://lint.page/kit/67ff88.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://lint.page/kit/67ff88.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <style>
+    :root {
+      --blue: #bae8f5;
+      --b: #9be3f8;
+      --bg: #ecede8;
+      --gap: 1rem;
+    }
 
-body {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 20px;
-  line-height: 1.5;
-  font-optical-sizing: auto;
+    body {
+      font-family: "Open Sans", sans-serif;
+      font-size: 20px;
+      line-height: 1.5;
+      font-optical-sizing: auto;
 
-  color: #FBFBFB;
-  text-shadow: 0 0 8px rgba(0, 0, 0, 0.82);
+      color: #fbfbfb;
+      text-shadow: 0 0 8px rgba(0, 0, 0, 0.82);
 
-  overflow-x: hidden;
-  background: center / 120% 120% no-repeat fixed
-              url(images/abstract_blue_waves.png);
-}  
+      overflow-x: hidden;
+      background: center / 120% 120% no-repeat fixed
+        url(images/abstract_blue_waves.png);
+    }
 
-body::before {
-  content: "";
-  position: fixed;
-  top: -2%;
-  left: -1%;
-  width: calc(100% + 20px);
-  height: 400px;
-  z-index: -1;
+    body::before {
+      content: "";
+      position: fixed;
+      top: -2%;
+      left: -1%;
+      width: calc(100% + 20px);
+      height: 400px;
+      z-index: -1;
 
-  background: center / 120% no-repeat
-              linear-gradient(rgba(255,255,255,0.5) 0%,
-                              rgba(255,255,255,0.5) 25%,
-                              rgba(0,0,0,0) 100%);
-  filter: blur(10px);
-}
+      background: center / 120% no-repeat
+        linear-gradient(
+          rgba(255, 255, 255, 0.5) 0%,
+          rgba(255, 255, 255, 0.5) 25%,
+          rgba(0, 0, 0, 0) 100%
+        );
+      filter: blur(10px);
+    }
 
-main {
-  margin: 0 -5%;
-  padding: 2% 10% 2%;
-  font-size: larger;
+    main {
+      margin: 0 -5%;
+      padding: 2% 10% 2%;
+      font-size: larger;
 
-  background-image: linear-gradient(rgba(0,0,0,0) 0%,
-                                    rgba(0,0,0,0.12) 5%,
-                                    rgba(0,0,0,0.12) 82%,
-                                    rgba(0,0,0,0) 100%);
-}
+      background-image: linear-gradient(
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.12) 5%,
+        rgba(0, 0, 0, 0.12) 82%,
+        rgba(0, 0, 0, 0) 100%
+      );
+    }
 
-a {  
-  font-size: 22px;
-  text-decoration: underline;
+    a {
+      font-size: 22px;
+      text-decoration: underline;
 
-  color: var(--b);
-  text-shadow: 0 0 2px rgba(255, 255, 255, 0.8);
-}
+      color: var(--b);
+      text-shadow: 0 0 2px rgba(255, 255, 255, 0.8);
+    }
 
-h1 {
-  text-align: center;
-  font-family: "Nunito", sans-serif;
-  font-size: 50px;
-  line-height: 44px;
+    h1 {
+      text-align: center;
+      font-family: "Nunito", sans-serif;
+      font-size: 50px;
+      line-height: 44px;
 
-  color: #000;
-  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-  paint-order: stroke fill;
-  -webkit-text-stroke: 4px rgba(152, 213, 230, 0.2);
-  -webkit-text-fill-color: black;
-}
+      color: #000;
+      text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+      paint-order: stroke fill;
+      -webkit-text-stroke: 4px rgba(152, 213, 230, 0.2);
+      -webkit-text-fill-color: black;
+    }
 
-header {
-  margin: 0;
-  padding: 0;
-  height: 7em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+    header {
+      margin: 0;
+      padding: 0;
+      height: 7em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-footer {
-  margin: 0 -5%;
-  padding: 4em 0 5%;
-  text-align: center;
-  text-shadow: none;
+    footer {
+      margin: 0 -5%;
+      padding: 4em 0 5%;
+      text-align: center;
+      text-shadow: none;
 
-  background-image: linear-gradient(rgba(0,0,0,0) 0%,
-                                    rgba(0,0,0,0.2) 18%,
-                                    rgba(0,0,0,0) 100%);
-}
-
-</style>
-<body>
+      background-image: linear-gradient(
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.2) 18%,
+        rgba(0, 0, 0, 0) 100%
+      );
+    }
+  </style>
+  <body>
     <header>
       <h1>waverider</h1>
     </header>
@@ -108,21 +123,32 @@ footer {
       <h2>main</h2>
       <section>
         <h3>hi!!</h3>
-        <p>my name is liam (username wave/waverider) and this is my main page.</p>
-        <a href = "web115/index.html">click here to go to my WEB115 course.</a>
-        <br><br>
+        <p>
+          my name is liam (username wave/waverider) and this is my main page.
+        </p>
+        <a href="web115/index.html">click here to go to my WEB115 course.</a>
+        <br /><br />
       </section>
       <section>
         <h3>a bit about myself:</h3>
-        <p>I love working with computers and I have a passion for coding, math, making music, art, games, computers, and robots.</p>
+        <p>
+          I love working with computers and I have a passion for coding, math,
+          making music, art, games, computers, and robots.
+        </p>
       </section>
-      <p>I also co-captain a robotics team, FTC 16461, Infinite Turtles- seamlessly working with others while also mentoring newer members.</p>
+      <p>
+        I also co-captain a robotics team, FTC 16461, Infinite Turtles-
+        seamlessly working with others while also mentoring newer members.
+      </p>
     </main>
     <footer>
-      <a href="https://github.com/waveriderCPCC" target="_blank">CPCC GitHub</a> |
-      <a href="https://github.com/liaminventions" target="_blank">Personal GitHub</a> |
+      <a href="https://github.com/waveriderCPCC" target="_blank">CPCC GitHub</a>
+      |
+      <a href="https://github.com/liaminventions" target="_blank"
+        >Personal GitHub</a
+      >
+      |
       <a href="https://16461.org" target="_blank">Infinite Turtles</a>
     </footer>
-</body>
+  </body>
 </html>
-  

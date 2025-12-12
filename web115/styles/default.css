@@ -1,16 +1,16 @@
 :root {
   --blue: #bae8f5;
-  --b: #9BE3F8;
+  --b: #9be3f8;
   --bg: #ecede8;
   --gap: 1rem;
   --glass: rgba(152, 213, 230, 0.5);
   /* colors: */
   --radius: 999px; /* full pill/circle */
   --swatch-size: 88px; /* adjust circle size */
-  --card-bg: #111;     /* page background */
-  --text: #fafafa;     /* default text color */
+  --card-bg: #111; /* page background */
+  --text: #fafafa; /* default text color */
   --muted: #c9c9c9;
-  --ring: rgba(255,255,255,.35);
+  --ring: rgba(255, 255, 255, 0.35);
 }
 
 body {
@@ -18,10 +18,10 @@ body {
     main body contents 
     */
 
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-style: normal;
 
-  color: #FBFBFB;
+  color: #fbfbfb;
 
   overflow-x: hidden;
   background-color: black;
@@ -35,7 +35,6 @@ body {
   font-optical-sizing: auto;
   font-style: normal;
   text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.82);
-
 }
 
 main {
@@ -57,7 +56,7 @@ h1 {
   flex-grow: 1;
   align-self: center;
 
-  color: #FFFFFF;
+  color: #ffffff;
 
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 1);
   paint-order: stroke fill;
@@ -75,18 +74,18 @@ header nav {
 }
 
 header {
-    color: white;
-    margin: 0;
-      margin-bottom: 2em;
+  color: white;
+  margin: 0;
+  margin-bottom: 2em;
 
-    padding: 0;
-    height: 7em; /* adjust height */
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    font-size: 24px;
-    font-weight: bold;
-    /* you can change 90deg to 180deg, to top, to bottom, etc. */
+  padding: 0;
+  height: 7em; /* adjust height */
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  /* you can change 90deg to 180deg, to top, to bottom, etc. */
 }
 
 /*header a{
@@ -102,40 +101,43 @@ header div {
   align-items: flex-start;
   max-width: 60vw;
   margin: 0 auto;
-} 
+}
 
 header div img {
   width: 12%;
   align-self: center;
-  margin: 20px
+  margin: 20px;
 }
 
 /* header a:hover {
   font-size: larger;
 } */
 
-a{
+a {
   /* this is a link */
 
-font-family: 'Open Sans', sans-serif;
-font-style: normal;
-font-weight: 400;
-text-decoration-line: underline;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  text-decoration-line: underline;
 
-color: #9BE3F8;
-text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.8);
-
-}  
+  color: #9be3f8;
+  text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.8);
+}
 
 footer {
-  text-align: center; 
+  text-align: center;
   padding-top: 4em;
   text-shadow: none;
-  background-image: linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,0.2) 18%, rgba(0,0,0,0) 100%); 
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.2) 18%,
+    rgba(0, 0, 0, 0) 100%
+  );
   padding-bottom: 5%;
-  margin-left:-5%;
+  margin-left: -5%;
   margin-right: -5%;
-}  
+}
 
 footer blockquote {
   padding-bottom: 15px;
@@ -147,7 +149,7 @@ figure {
 }
 
 figure img {
-  width: 352px;  
+  width: 352px;
   border-radius: 15px;
   filter: drop-shadow(0px 0px 12px rgba(255, 255, 255, 0.5));
 }
@@ -156,7 +158,7 @@ figure img {
 
 .board {
   max-width: 50em;
-}  
+}
 
 .palette {
   display: grid;
@@ -208,87 +210,88 @@ figure img {
 }
 
 blockquote {
-  text-align: center
+  text-align: center;
 }
 
-footer>em {
+footer > em {
   display: block;
   /* padding-top: 20px; */
   font-size: 18px;
   font-weight: normal;
-}  
+}
 
 form span {
   padding: 1em;
-}  
+}
 
 /* form input {
   width: 50px;
 } */
 
 table {
-	text-align: left;
+  text-align: left;
   border: 2px solid var(--blue);
   border-radius: 12px;
-  border-collapse: separate;  
-  overflow: hidden;         
-}  
+  border-collapse: separate;
+  overflow: hidden;
+}
 
-td, th {
+td,
+th {
   padding: 0 1.22vw;
   border: 4px solid var(--glass);
-  border-left:none;
-  border-top:none;  
-}  
+  border-left: none;
+  border-top: none;
+}
 
-table .total > td, 
+table .total > td,
 table .total > th {
   background-color: var(--glass);
-}   
-
+}
 
 table tr:first-child th:first-child {
   border-top-left-radius: 12px;
-}  
+}
 
 table tr:first-child th:last-child {
   border-top-right-radius: 12px;
-}  
+}
 
 td:last-child,
 th:last-child {
   border-right: none;
-}  
-
-label {
-    margin-bottom: 10px;
-    padding: 20px;
 }
 
-input[type="text"], select {
-    box-sizing: border-box;
-    width: 15vw;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+label {
+  margin-bottom: 10px;
+  padding: 20px;
+}
+
+input[type="text"],
+select {
+  box-sizing: border-box;
+  width: 15vw;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 textarea {
-    box-sizing: border-box;
-    width:25vw;
-    height:5vw;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}  
+  box-sizing: border-box;
+  width: 25vw;
+  height: 5vw;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
 
 fieldset textarea {
   width: 15vw;
-  height:2vw;
-}  
+  height: 2vw;
+}
 
 .preview {
-  width: 25vw
+  width: 25vw;
 }
 
 /* body::before {
